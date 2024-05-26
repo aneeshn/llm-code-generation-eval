@@ -37,4 +37,22 @@ repos:
 ```
 
 Now add the following to the pre-commit files:
-- Lint: Flake-8
+- Flake-8
+- Trailing Whitespace
+- Black
+- Isort
+- Check Added Large Files
+- Check Yaml
+- End of file fixer
+
+How to use the pre-commit hook for developement purposes?
+
+- After `git add <files>`
+- Run:
+```commandline
+pre-commit run --all-files
+```
+
+If there are changes to fixed automatically the changes will reflect themselves.
+Otherwise it will fail with errors, which you have to fix yourself.
+Commit the files yourself after and repeat the process to ensure no more failures exist.
