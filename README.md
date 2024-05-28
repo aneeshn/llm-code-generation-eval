@@ -56,3 +56,15 @@ pre-commit run --all-files
 If there are changes to fixed automatically the changes will reflect themselves.
 Otherwise it will fail with errors, which you have to fix yourself.
 Commit the files yourself after and repeat the process to ensure no more failures exist.
+
+### How to use the Dockerfile?
+Ensure that you have docker running on your machine. Then follow the steps below:
+
+1. Run the following the command to build the project
+```commandline
+docker build -t llm-code-generation-eval:<commit-hash> .
+```
+2. After successfully building the container run the following command:
+```commandline
+docker run --rm -it llm-code-generation-eval:<commit-hash>
+```
